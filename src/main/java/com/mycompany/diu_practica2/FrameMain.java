@@ -29,7 +29,6 @@ public class FrameMain extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(new java.awt.Color(210, 251, 247));
         this.setTitle("Money Exchanger");
-
     }
 
     /**
@@ -71,14 +70,24 @@ public class FrameMain extends javax.swing.JFrame {
             }
         });
 
-        buttonEuro.setIcon(new javax.swing.ImageIcon("/Users/Andres/Documents/Mis Archivos/Universidad/ULPGC/Asignaturas/4º/DIU/Practica_2/DIU_practica2/media/euro.png")); // NOI18N
+        buttonEuro.setBackground(new java.awt.Color(153, 153, 153));
+        buttonEuro.setFont(new java.awt.Font("Century Schoolbook", 0, 14)); // NOI18N
+        buttonEuro.setText("Convert to Euro");
+        buttonEuro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonEuro.setBorderPainted(false);
+        buttonEuro.setOpaque(true);
         buttonEuro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonEuroActionPerformed(evt);
             }
         });
 
-        buttonDolar.setIcon(new javax.swing.ImageIcon("/Users/Andres/Documents/Mis Archivos/Universidad/ULPGC/Asignaturas/4º/DIU/Practica_2/DIU_practica2/media/dolar.png")); // NOI18N
+        buttonDolar.setBackground(new java.awt.Color(153, 153, 153));
+        buttonDolar.setFont(new java.awt.Font("Century Schoolbook", 0, 14)); // NOI18N
+        buttonDolar.setText("Convert to Dolar");
+        buttonDolar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonDolar.setBorderPainted(false);
+        buttonDolar.setOpaque(true);
         buttonDolar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonDolarActionPerformed(evt);
@@ -99,47 +108,45 @@ public class FrameMain extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(infoRatioExchange)
-                            .addComponent(infoValueExchange))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(valueExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valueRatioExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(22, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(208, 208, 208)
+                                .addComponent(resultMessage))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(infoRatioExchange)
+                                    .addComponent(infoValueExchange))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(valueExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(valueRatioExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonDolar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(buttonEuro)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonDolar)
-                        .addGap(31, 31, 31))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(resultMessage)
-                .addGap(218, 218, 218))
+                        .addGap(54, 54, 54)
+                        .addComponent(buttonEuro, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(infoRatioExchange)
-                            .addComponent(valueExchange, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(infoValueExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valueRatioExchange, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(buttonDolar))
-                    .addComponent(buttonEuro))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(infoRatioExchange)
+                    .addComponent(valueExchange, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(infoValueExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valueRatioExchange, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonEuro, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonDolar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(resultMessage)
-                .addGap(75, 75, 75))
+                .addGap(28, 28, 28))
         );
 
         pack();
